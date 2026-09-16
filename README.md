@@ -1,6 +1,6 @@
 # Search and AI-search APIs
 
-Eleven APIs that return search results as structured data, with what each one actually bills for and where each one breaks. Google and Bing SERPs, the AI answer surfaces, and the independent indexes built for agents.
+Twelve APIs that return search results as structured data, with what each one actually bills for and where each one breaks. Google and Bing SERPs, the AI answer surfaces, and the independent indexes built for agents.
 
 Every price was read from the vendor's own pricing page on **2026-08-12** and links to it. Where pricing is per-endpoint or quote-only, this list says so rather than inventing a number.
 
@@ -9,7 +9,7 @@ Every price was read from the vendor's own pricing page on **2026-08-12** and li
 - [Which one do I need?](#which-one-do-i-need)
 - [SERP APIs](#serp-apis) · [SerpApi](#serpapi) · [DataForSEO](#dataforseo) · [Bright Data](#bright-data) · [Oxylabs](#oxylabs) · [cloro](#cloro) · [Scrapingdog](#scrapingdog) · [SearchApi](#searchapi)
 - [Which of these cover the AI answer surfaces?](#which-of-these-cover-the-ai-answer-surfaces)
-- [Independent indexes for agents](#independent-indexes-for-agents) · [Exa](#exa) · [Tavily](#tavily) · [Brave](#brave-search-api) · [Firecrawl](#firecrawl)
+- [Independent indexes for agents](#independent-indexes-for-agents) · [Exa](#exa) · [Tavily](#tavily) · [Brave](#brave-search-api) · [Firecrawl](#firecrawl) · [Desearch](#desearch)
 - [Also in this category](#also-in-this-category)
 - [The five questions worth asking any vendor](#the-five-questions-worth-asking-any-vendor)
 - [How this list is made](#how-this-list-is-made)
@@ -161,6 +161,16 @@ One of the few genuinely independent web indexes at real scale, rather than a re
 Crawl-and-extract rather than search. Point it at a site and get markdown back, which is the right tool when the job is ingestion rather than ranking.
 
 **Pricing.** Hobby **$16/mo billed yearly for 5,000 pages, 5 concurrent** ([pricing](https://www.firecrawl.dev/pricing)).
+
+### Desearch
+
+![Desearch](images/desearch.webp)
+
+Web results and X (Twitter) posts through one REST API, served by miners on Bittensor Subnet 22 and billed in USD ([how it works](https://www.desearch.ai/docs/guide/introduction/desearch-x-bittensor)). X search takes X's query operators ([X API](https://www.desearch.ai/docs/guide/apis/x-api)) and uses a Desearch key rather than an X developer account ([X API page](https://www.desearch.ai/twitter-api)).
+
+**Pricing.** **$0.10 per 100 web searches** and **$0.15 per 1,000 X posts** with a 10-post minimum per request, read 2026-09-16 ([pricing](https://www.desearch.ai/pricing)).
+
+**What it cannot do.** Act as a Google SERP API. The docs don't say which index web results come from, and `GET /web` returns only a title, snippet and link per result, with no ads, People Also Ask or AI Overview fields ([reference](https://www.desearch.ai/docs/api-reference/get-web)). Rate-limit numbers are shown only in the console ([rate limits](https://www.desearch.ai/docs/guide/introduction/rate-limit)).
 
 ## Also in this category
 
