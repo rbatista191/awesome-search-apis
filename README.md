@@ -77,9 +77,9 @@ The closest comparable to Bright Data, and the best documented of the enterprise
 
 ![cloro](images/cloro.webp)
 
-Google Search and Google News alongside one endpoint per AI surface: ChatGPT, Perplexity, Gemini, Copilot, Grok, Google AI Mode and AI Overview. Returns parsed citations, the query fan-out terms behind an answer, and shopping data as structured JSON rather than screenshots.
+Google Search and Google News alongside one endpoint per AI surface: ChatGPT, Perplexity, Gemini, Copilot, Google AI Mode and AI Overview. Returns parsed citations, the query fan-out terms behind an answer, and shopping data as structured JSON rather than screenshots.
 
-**Pricing.** Credit-based: free tier **500 credits a month**, Lite **$30/mo for 37,500 credits ($0.80/1,000)**, Hobby **$100/mo for 250,000 ($0.40/1,000)**, falling to $0.31 at the top self-serve tier ([pricing](https://cloro.dev/pricing/)). Calls cost different credits by surface: a ChatGPT web-search call is 5, Perplexity 3, Google Search 3 plus 2 per extra page.
+**Pricing.** Credit-based: free tier **500 credits a month**, Lite **$30/mo for 37,500 credits ($0.80/1,000)**, Hobby **$100/mo for 250,000 ($0.40/1,000)**, falling to $0.31 at the top self-serve tier ([pricing](https://cloro.dev/pricing/)). Calls cost different credits by surface: a ChatGPT web-search call is 5, Perplexity 4, Google Search 3 plus 2 per extra page.
 
 **Where it fits.** Built for tracking what AI engines say about a brand, so the citation parsing is the product rather than a field on a SERP response. The [MCP server source is public](https://github.com/cloro-dev/mcp-server) if you want to read what runs before buying. Agent skills for Claude Code, Codex and Cursor are in [cloro-dev/skills](https://github.com/cloro-dev/skills).
 
@@ -111,7 +111,7 @@ Reading what ChatGPT or Perplexity answered is a different job from reading a SE
 
 | Vendor | Surfaces | What comes back |
 | --- | --- | --- |
-| [cloro](#cloro) | ChatGPT, Perplexity, Gemini, Copilot, Grok, AI Mode, AI Overview | Parsed citations, query fan-out, shopping data |
+| [cloro](#cloro) | ChatGPT, Perplexity, Gemini, Copilot, AI Mode, AI Overview | Parsed citations, query fan-out, shopping data |
 | [Oxylabs](#oxylabs) | ChatGPT, Perplexity, AI Mode | Per-surface scrapers with public example repos |
 | [Bright Data](#bright-data) | AI-surface endpoints alongside the SERP products | Same enterprise contract as the rest |
 | [SerpApi](#serpapi) | AI Overview only | Returned as part of the Google endpoint, not a separate product |
