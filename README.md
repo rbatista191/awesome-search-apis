@@ -1,6 +1,6 @@
 # Search and AI-search APIs
 
-Eleven APIs that return search results as structured data, with what each one actually bills for and where each one breaks. Google and Bing SERPs, the AI answer surfaces, and the independent indexes built for agents.
+Twelve APIs that return search results as structured data, with what each one actually bills for and where each one breaks. Google and Bing SERPs, the AI answer surfaces, and the independent indexes built for agents.
 
 Every price was read from the vendor's own pricing page on **2026-08-12** and links to it. Where pricing is per-endpoint or quote-only, this list says so rather than inventing a number.
 
@@ -9,7 +9,7 @@ Every price was read from the vendor's own pricing page on **2026-08-12** and li
 - [Which one do I need?](#which-one-do-i-need)
 - [SERP APIs](#serp-apis) · [SerpApi](#serpapi) · [DataForSEO](#dataforseo) · [Bright Data](#bright-data) · [Oxylabs](#oxylabs) · [cloro](#cloro) · [Scrapingdog](#scrapingdog) · [SearchApi](#searchapi)
 - [Which of these cover the AI answer surfaces?](#which-of-these-cover-the-ai-answer-surfaces)
-- [Independent indexes for agents](#independent-indexes-for-agents) · [Exa](#exa) · [Tavily](#tavily) · [Brave](#brave-search-api) · [Firecrawl](#firecrawl)
+- [Independent indexes for agents](#independent-indexes-for-agents) · [Exa](#exa) · [Tavily](#tavily) · [Brave](#brave-search-api) · [Keenable](#keenable) · [Firecrawl](#firecrawl)
 - [Also in this category](#also-in-this-category)
 - [The five questions worth asking any vendor](#the-five-questions-worth-asking-any-vendor)
 - [How this list is made](#how-this-list-is-made)
@@ -153,6 +153,14 @@ One of the few genuinely independent web indexes at real scale, rather than a re
 **Pricing.** **$5 in free monthly credits** on the entry plan ([details](https://brave.com/search/api/)).
 
 **Where it fits.** Independence is the point: no dependence on Google's tolerance, and a different result set from anything Google-derived. If your use case needs Google specifically, that same independence is the reason it will not work.
+
+### Keenable
+
+An independent web index built for agents, with search and page fetch (markdown) as the two core calls, over REST, CLI or a hosted MCP server.
+
+**Pricing.** **100K free requests a month**, then **$4 per 1,000 requests** pay-as-you-go; dedicated capacity **$1 per 1,000 at 100+ RPS** ([pricing](https://keenable.ai/pricing), read 2026-11-03). Agents without an account can also pay **$0.01 per request in USDC via x402** ([docs](https://docs.keenable.ai)).
+
+**What it cannot do.** Same limit as Exa and Tavily: it is not reading Google, so it cannot tell you where you rank or what an AI Overview said.
 
 ### Firecrawl
 
