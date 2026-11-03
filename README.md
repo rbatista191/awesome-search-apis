@@ -81,7 +81,7 @@ Google Search and Google News alongside one endpoint per AI surface: ChatGPT, Pe
 
 **Pricing.** Credit-based: free tier **500 credits a month**, Lite **$30/mo for 37,500 credits ($0.80/1,000)**, Hobby **$100/mo for 250,000 ($0.40/1,000)**, falling to $0.31 at the top self-serve tier ([pricing](https://cloro.dev/pricing/)). Calls cost different credits by surface: a ChatGPT web-search call is 5, Perplexity 3, Google Search 3 plus 2 per extra page.
 
-**Where it fits.** Built for tracking what AI engines say about a brand, so the citation parsing is the product rather than a field on a SERP response. The [MCP server source is public](https://github.com/cloro-dev/mcp-server) if you want to read what runs before buying.
+**Where it fits.** Built for tracking what AI engines say about a brand, so the citation parsing is the product rather than a field on a SERP response. The [MCP server source is public](https://github.com/cloro-dev/mcp-server) if you want to read what runs before buying. Agent skills for Claude Code, Codex and Cursor are in [cloro-dev/skills](https://github.com/cloro-dev/skills).
 
 **Where it does not.** It is API-first with no dashboard, so if you want a report a marketing team reads, buy one of the visibility trackers instead. And below a few thousand queries a month, the maths does not favour any managed API over running Playwright yourself.
 
