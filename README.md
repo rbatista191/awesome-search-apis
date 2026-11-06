@@ -10,6 +10,7 @@ Every price was read from the vendor's own pricing page on **2026-08-12** and li
 - [SERP APIs](#serp-apis) · [SerpApi](#serpapi) · [DataForSEO](#dataforseo) · [Bright Data](#bright-data) · [Oxylabs](#oxylabs) · [cloro](#cloro) · [Scrapingdog](#scrapingdog) · [SearchApi](#searchapi)
 - [Which of these cover the AI answer surfaces?](#which-of-these-cover-the-ai-answer-surfaces)
 - [Independent indexes for agents](#independent-indexes-for-agents) · [Exa](#exa) · [Tavily](#tavily) · [Brave](#brave-search-api) · [Firecrawl](#firecrawl)
+- [Which is most accurate for AI agents?](#which-is-most-accurate-for-ai-agents)
 - [Also in this category](#also-in-this-category)
 - [The five questions worth asking any vendor](#the-five-questions-worth-asking-any-vendor)
 - [How this list is made](#how-this-list-is-made)
@@ -161,6 +162,21 @@ One of the few genuinely independent web indexes at real scale, rather than a re
 Crawl-and-extract rather than search. Point it at a site and get markdown back, which is the right tool when the job is ingestion rather than ranking.
 
 **Pricing.** Hobby **$16/mo billed yearly for 5,000 pages, 5 concurrent** ([pricing](https://www.firecrawl.dev/pricing)).
+
+## Which is most accurate for AI agents?
+
+One public benchmark tests six of these APIs with one setup: [cloro-dev/web-search-api-benchmark](https://github.com/cloro-dev/web-search-api-benchmark), run in November 2026. cloro ran it, and cloro is one of the six. Each question got one search, with the question text as the query, and the same model answered from each set of results only. The harness, the settings and every graded answer are public, so you can run it again.
+
+| API | SimpleQA Verified (1,000 questions) | FreshQA (358 questions) |
+| --- | --: | --: |
+| Parallel | 97.8% | 82.7% |
+| Exa | 97.3% | 83.0% |
+| cloro | 96.9% | 88.3% |
+| SerpApi | 94.7% | 88.5% |
+| Brave Search API | 93.1% | 84.9% |
+| Tavily | 91.8% | 81.8% |
+
+The top three on SimpleQA are inside each other's margin of error. FreshQA asks questions whose answers change over time, and the two APIs that read Google's live page lead it. The [write-up on cloro.dev](https://cloro.dev/blog/best-search-api/) adds the price per 1,000 searches and the overlap with Google's top 10.
 
 ## Also in this category
 
