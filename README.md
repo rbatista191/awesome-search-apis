@@ -1,13 +1,13 @@
 # Search and AI-search APIs
 
-Eleven APIs that return search results as structured data, with what each one actually bills for and where each one breaks. Google and Bing SERPs, the AI answer surfaces, and the independent indexes built for agents.
+Twelve API providers that return search results as structured data, with what each one actually bills for and where each one breaks. Google and Bing SERPs, the AI answer surfaces, and the independent indexes built for agents.
 
 Every price was read from the vendor's own pricing page on **2026-08-12** and links to it. Where pricing is per-endpoint or quote-only, this list says so rather than inventing a number.
 
 ## Contents
 
 - [Which one do I need?](#which-one-do-i-need)
-- [SERP APIs](#serp-apis) · [SerpApi](#serpapi) · [DataForSEO](#dataforseo) · [Bright Data](#bright-data) · [Oxylabs](#oxylabs) · [cloro](#cloro) · [Scrapingdog](#scrapingdog) · [SearchApi](#searchapi)
+- [SERP APIs](#serp-apis) · [SerpApi](#serpapi) · [DataForSEO](#dataforseo) · [Bright Data](#bright-data) · [Oxylabs](#oxylabs) · [cloro](#cloro) · [Scrapingdog](#scrapingdog) · [SearchApi](#searchapi) · [FlashData](#flashdata-google-search-apis)
 - [Which of these cover the AI answer surfaces?](#which-of-these-cover-the-ai-answer-surfaces)
 - [Independent indexes for agents](#independent-indexes-for-agents) · [Exa](#exa) · [Tavily](#tavily) · [Brave](#brave-search-api) · [Firecrawl](#firecrawl)
 - [Which is most accurate for AI agents?](#which-is-most-accurate-for-ai-agents)
@@ -105,6 +105,21 @@ Straightforward per-search pricing with a clear ladder, and the easiest cost mod
 **Pricing.** Developer **$40/mo for 10,000 searches at $4 per 1,000**, Production **$100/mo at $3 per 1,000** ([pricing](https://www.searchapi.io/pricing)). Higher tiers keep lowering the per-1,000 rate.
 
 **Where it fits.** Mid-volume teams who want predictable arithmetic rather than a credit pool. The per-search model means the `num=100` pagination change applies here the same way it does at SerpApi: price at your depth.
+
+### FlashData Google Search APIs
+
+Task-specific Google result sources, each with its own documentation:
+
+- [Google Search Results API](https://flashdata.dev/docs/sources/google_search): Retrieve structured Google web results, links and snippets; not full-page extraction.
+- [Google News Search API](https://flashdata.dev/docs/sources/google_news): Search Google News headlines, publication details and links; not full articles.
+- [Google Images Search API](https://flashdata.dev/docs/sources/google_images): Search image URLs, thumbnails and source pages; does not download or license images.
+- [Google Shopping Search API](https://flashdata.dev/docs/sources/google_shopping): Retrieve Google Shopping product links, merchants and displayed prices; no stock guarantee.
+- [Google Video Search API](https://flashdata.dev/docs/sources/google_videos): Find video results across websites through Google Videos search.
+- [Google Places Search API](https://flashdata.dev/docs/sources/google_places): Search local businesses and places with available addresses, ratings and contact fields.
+
+**Pricing.** Paid Credits and API-key authentication; see the official source documentation above and [pricing](https://flashdata.dev/pricing). Trial access is eligibility-based, not an ongoing free tier. Exact current per-source rates are not asserted here.
+
+**Scope.** Structured Google result data, not an independent search index or arbitrary webpage full-text extraction. This entry does not claim AI-answer-surface coverage or ranking guarantees. Added 2026-11-10; existing vendors' dated prices above have not been rechecked in this contribution.
 
 ## Which of these cover the AI answer surfaces?
 
