@@ -78,7 +78,7 @@ The closest comparable to Bright Data, and the best documented of the enterprise
 
 ![cloro](images/cloro.webp)
 
-Google Search and Google News alongside one endpoint per AI surface: ChatGPT, Gemini, Google AI Mode, Bing AI Mode and AI Overview. Returns parsed citations, the query fan-out terms behind an answer, and shopping data as structured JSON rather than screenshots.
+Google Search, Bing Search and Google News alongside one endpoint per AI surface: ChatGPT, Gemini, Google AI Mode, Bing AI Mode and AI Overview. Returns parsed citations, the query fan-out terms behind an answer, and shopping data as structured JSON rather than screenshots.
 
 **Pricing.** Credit-based: free tier **500 credits a month**, Lite **$30/mo for 37,500 credits ($0.80/1,000)**, Hobby **$100/mo for 250,000 ($0.40/1,000)**, falling to $0.31 at the top self-serve tier ([pricing](https://cloro.dev/pricing/)). Calls cost different credits by surface: a ChatGPT web-search call is 5, Google Search 3 plus 2 per extra page.
 
