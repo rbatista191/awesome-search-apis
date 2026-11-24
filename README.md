@@ -182,6 +182,8 @@ The top three on SimpleQA are inside each other's margin of error. FreshQA asks 
 
 Worth knowing, without a full entry each: [ScraperAPI](https://www.scraperapi.com) (Hobby $49/mo, 100,000 credits, 20 threads, geotargeting limited to US and EU on that tier), [ScrapingBee](https://www.scrapingbee.com) (Freelance $49/mo, 250,000 credits, 50 concurrent), [ZenRows](https://www.zenrows.com) (Build $16/mo, 45,000 credits, 20 concurrent), [HasData](https://hasdata.com) (Startup $49/mo, up to 200,000 requests, 15 concurrent), [Serper](https://serper.dev) (very cheap, very fast, Google only), [Apify](https://apify.com) (an actor marketplace rather than a SERP API, reliability tracks whoever maintains the actor). [Olostep](https://www.olostep.com) and [Scrapeless](https://www.scrapeless.com) appear in the AI-surface table above.
 
+To compare plans and prices across 50+ web search APIs, there is [Datacircle's web search API benchmark](https://datacircle.dev/best-web-search-api).
+
 For dashboards rather than APIs, the AI-visibility tracker category is a different purchase entirely: [Profound](https://www.tryprofound.com), [Peec AI](https://peec.ai), [Brandlight](https://brandlight.ai), [AthenaHQ](https://athenahq.ai), [OtterlyAI](https://otterly.ai), [Scrunch](https://www.scrunchai.com), [Evertune](https://www.evertune.ai) and others. Buy those if the output is a report someone reads.
 
 ## The five questions worth asking any vendor
