@@ -165,18 +165,19 @@ Crawl-and-extract rather than search. Point it at a site and get markdown back, 
 
 ## Which is most accurate for AI agents?
 
-One public benchmark tests six of these APIs with one setup: [cloro-dev/web-search-api-benchmark](https://github.com/cloro-dev/web-search-api-benchmark), run in November 2026. cloro ran it, and cloro is one of the six. Each question got one search, with the question text as the query, and the same model answered from each set of results only. The harness, the settings and every graded answer are public, so you can run it again.
+One public benchmark tests seven of these APIs with one setup: [cloro-dev/web-search-api-benchmark](https://github.com/cloro-dev/web-search-api-benchmark), run in November 2026. cloro ran it, and cloro is one of the seven. Each question got one search, with the question text as the query. One model, `claude-haiku-5-5`, answered from each set of results only and graded every answer. The harness, the settings and every graded answer are public, so you can run it again.
 
-| API | SimpleQA Verified (1,000 questions) | FreshQA (358 questions) |
-| --- | --: | --: |
-| Parallel | 97.8% | 82.7% |
-| Exa | 97.3% | 83.0% |
-| cloro | 96.9% | 88.3% |
-| SerpApi | 94.7% | 88.5% |
-| Brave Search API | 93.1% | 84.9% |
-| Tavily | 91.8% | 81.8% |
+| API | SimpleQA Verified (1,000 questions) | FreshQA (358 questions) | FRAMES (824 multi-hop questions) |
+| --- | --: | --: | --: |
+| cloro | 96.5% | 89.7% | 79.1% |
+| Exa | 95.0% | 89.1% | 48.9% |
+| Parallel | 95.0% | 84.1% | 43.6% |
+| Brave Search API | 89.7% | 87.2% | 26.3% |
+| Tavily | 88.9% | 81.3% | 18.1% |
+| Firecrawl | 88.6% | 80.4% | 16.1% |
+| SerpApi | 38.9% | 69.0% | 7.9% |
 
-The top three on SimpleQA are inside each other's margin of error. FreshQA asks questions whose answers change over time, and the two APIs that read Google's live page lead it. The [write-up on cloro.dev](https://cloro.dev/blog/best-search-api/) adds the price per 1,000 searches and the overlap with Google's top 10.
+On SimpleQA, cloro, Exa and Parallel are inside each other's margin of error. On FreshQA, questions whose answers change over time, cloro, Exa and Brave are. Every API got one request per search. SerpApi loads most Google AI Overviews in a second request, so its first response had one on only 15 of the 1,000 SimpleQA questions. The benchmark also has an agent test, where a model searches up to 10 times per question: Parallel (70.0%) and Exa (65.9%) scored highest of these seven, then cloro (52.4%), Brave (47.5%), Tavily (46.9%), Firecrawl (44.7%) and SerpApi (37.3%). The [write-up on cloro.dev](https://cloro.dev/blog/best-search-api/) adds the price per 1,000 searches and the overlap with Google's top 10.
 
 ## Also in this category
 
